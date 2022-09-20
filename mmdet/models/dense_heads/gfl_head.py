@@ -334,6 +334,7 @@ class GFLHead(AnchorHead):
         featmap_sizes = [featmap.size()[-2:] for featmap in cls_scores]
         assert len(featmap_sizes) == self.prior_generator.num_levels
 
+        import ipdb; ipdb.set_trace()
         device = cls_scores[0].device
         anchor_list, valid_flag_list = self.get_anchors(
             featmap_sizes, img_metas, device=device)
